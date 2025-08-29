@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 const axiosInstance = axios.create({
-  baseURL: 'https://foodorder-mern-stack-2.onrender.com'
+  baseURL: 'https://foodorder-mern-stack-2.onrender.com/'
 });
 
 axiosInstance.interceptors.request.use(
