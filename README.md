@@ -14,7 +14,6 @@ A full-featured food ordering application built with the **MERN stack (MongoDB, 
 - 🔐 **User Authentication** – Secure signup and login functionality with JWT tokens.
 - 📦 **Order Placement** – Seamlessly place orders and view past order history.
 - ⏱️ **Real-Time Order Tracking** – Stay updated with live order status (e.g., Preparing, Out for Delivery, Delivered).
-- 🖥️ **Admin Dashboard** – Manage menu items, view all orders, and track delivery status (optional).
 - 📱 **Responsive UI** – Fully responsive and mobile-friendly design using modern React practices.
 
 ---
@@ -25,7 +24,7 @@ A full-featured food ordering application built with the **MERN stack (MongoDB, 
 - React.js
 - Axios
 - React Router
-- Tailwind CSS or Bootstrap (based on your choice)
+- Tailwind CSS
 
 **Backend:**
 - Node.js
@@ -39,18 +38,47 @@ A full-featured food ordering application built with the **MERN stack (MongoDB, 
 ## 📁 Project Structure
 
 ```
-mern-food-app/
-├── client/          # React frontend
+foodorder_MERN_STACK/
+├── client/                    # React frontend
 │   ├── public/
-│   └── src/
-│       ├── components/
-│       ├── pages/
-│       └── App.jsx
-├── server/          # Express backend
-│   ├── controllers/
+│   │   └── assets/
+│   │       └── cate/
+│   ├── src/
+│   │   ├── assets/
+│   │   │   └── svg/
+│   │   ├── components/
+│   │   ├── constants/
+│   │   ├── context/
+│   │   ├── pages/
+│   │   ├── App.jsx
+│   │   ├── axiosConfig.js
+│   │   ├── firebase.js
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── .eslintrc.cjs
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── tailwind.config.js
+│   ├── vite.config.js
+│   └── README.md
+├── server/                    # Express backend
+│   ├── controllers/           # (new folder for route logic)
+│   ├── middleware/
+│   │   └── Token.js
 │   ├── models/
-│   └── index.js
+│   │   ├── Cart.js
+│   │   ├── Category.js
+│   │   ├── FoodItem.js
+│   │   ├── Orders.js
+│   │   └── User.js
+│   ├── scripts/
+│   │   ├── populateCategories.js
+│   │   └── uploadFoodItems.js
+│   ├── .env
+│   ├── index.js
+│   └── package.json
 └── README.md
+
 ```
 
 ---
@@ -59,27 +87,27 @@ mern-food-app/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/mern-food-app.git
-cd mern-food-app
+git clone https://github.com/Aditya-rao-1/foodorder_MERN_STACK.git
+cd foodorder_MERN_STACK
 ```
 
 ### 2. Start the Backend
 ```bash
-cd server
+cd backend
 npm install
-npm start
+npm run start-dev
 ```
 
 ### 3. Start the Frontend
 ```bash
-cd client
+cd frontend
 npm install
-npm start
+npm run dev
 ```
 
 The app should now be running on:
-- Frontend: `http://localhost:3000`
-- Backend: `http://localhost:5000`
+- Frontend: `http://localhost:5713`
+- Backend: `http://localhost:8080`
 
 ---
 
@@ -88,7 +116,6 @@ The app should now be running on:
 - Sign up or log in as a user
 - Browse the menu and add items to your cart
 - Place an order and track its status
-- (Optional) Log in as admin to manage orders and menu items
 
 ---
 
@@ -104,16 +131,14 @@ The app should now be running on:
 ## 📌 Future Improvements
 
 - Payment Gateway Integration (e.g., Stripe)
-- Advanced Admin Panel
 - SMS/Email Notifications
-- Delivery Partner Login Panel
 
 ---
 
 ## 🧑‍💻 Author
 
-**Your Name**  
-[GitHub](https://github.com/yourusername) • [LinkedIn](https://linkedin.com/in/yourprofile)
+**Adithya rao**  
+[GitHub](https://github.com/Aditya-rao-1) • [LinkedIn](https://www.linkedin.com/in/aditya-rao-7044a3317/)
 
 ---
 
